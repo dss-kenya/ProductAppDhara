@@ -114,6 +114,6 @@ public class MainFragment extends Fragment implements ISearchPerformedListener{
          * And notify the adapter. The search string will be searched for in the
          * product name, product description, and also product category.
          */
-
+         mProductAdapter.getFilter().filter(searchString);
     }
 }
