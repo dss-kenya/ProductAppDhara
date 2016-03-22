@@ -1,0 +1,23 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="ProductApp">
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+
+    <style name="ProductApp.TitleTextStyle">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/header_size</item>
+    </style>
+
+    <style name="ProductApp.NormalTextStyle">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/normal_size</item>
+    </style>
+
+</resources>

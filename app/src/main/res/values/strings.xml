@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ProductApp</string>
+    <string name="action_search">Search product</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="helveticaneueetpro_45lt">HelveticaNeueETPro-45Lt.ttf</string>
+    <string name="helveticaneueetpro_65md">HelveticaNeueETPro-65Md.ttf</string>
+    <string name="helveticaneueetpro_75bd">HelveticaNeueETPro-75Bd.ttf</string>
+</resources>

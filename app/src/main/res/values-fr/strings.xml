@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ProductApp</string>
+    <string name="action_search">Sercher le product</string>
+    <string name="action_settings">Les settings</string>
+</resources>
