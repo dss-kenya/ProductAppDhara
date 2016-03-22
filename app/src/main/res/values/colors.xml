@@ -5,4 +5,5 @@
     <color name="colorWhite">#FFF</color>
     <color name="colorBlack">#000</color>
     <color name="colorDivider">#b2b2b2</color>
+    <color name="colorBlackFaded">#22000000</color>
 </resources>

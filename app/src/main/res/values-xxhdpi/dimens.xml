@@ -2,4 +2,5 @@
 <resources>
     <dimen name="image_small_dimen">65dp</dimen>
     <dimen name="padding">10dp</dimen>
+    <dimen name="view_pager_height">240dp</dimen>
 </resources>
