@@ -21,6 +21,8 @@
             style="ProductApp.TitleTextStyle"
             android:singleLine="true"
             android:ellipsize="end"
+            android:paddingLeft ="@dimen/padding"
+            android:paddingRight="@dimen/padding"
             app:fontName_TextView="@string/helveticaneueetpro_75bd"/>
     </RelativeLayout>
 </android.support.v7.widget.Toolbar>

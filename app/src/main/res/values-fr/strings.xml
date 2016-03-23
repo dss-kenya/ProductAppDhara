@@ -1,5 +1,7 @@
 <resources>
-    <string name="app_name">ProductApp</string>
-    <string name="action_search">Sercher le product</string>
-    <string name="action_settings">Les settings</string>
+    <string name="app_name">FR-Product App</string>
+    <string name="action_search">Chercher le produit</string>
+    <string name="action_settings">Parametres de langue</string>
+    <string name="ok">OUI</string>
+    <string name="cancel">NON</string>
 </resources>

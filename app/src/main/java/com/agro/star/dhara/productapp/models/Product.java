@@ -5,11 +5,11 @@ package com.agro.star.dhara.productapp.models;
  */
 public class Product {
     private int id;
-    private String categoryName;
     private String productName;
     private String productDescription;
     private String productImage;
     private Double productPrice;
+    private String productDisplayPrice;
 
     public int getId() {
         return id;
@@ -51,11 +51,11 @@ public class Product {
         this.productPrice = productPrice;
     }
 
-    public String getCategoryName() {
-        return categoryName;
+    public String getProductDisplayPrice() {
+        return productDisplayPrice;
     }
 
-    public void setCategoryName(String categoryName) {
-        this.categoryName = categoryName;
+    public void setProductDisplayPrice(String productDisplayPrice) {
+        this.productDisplayPrice = productDisplayPrice;
     }
 }

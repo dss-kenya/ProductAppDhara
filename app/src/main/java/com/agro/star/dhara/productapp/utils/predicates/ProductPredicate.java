@@ -18,7 +18,6 @@ public class ProductPredicate implements Predicate<Product> {
     @Override
     public boolean apply(Product product) {
         return product.getProductName().toLowerCase(Locale.ENGLISH).contains(mSearchString) ||
-                product.getProductDescription().toLowerCase(Locale.ENGLISH).contains(mSearchString) ||
-                product.getCategoryName().toLowerCase(Locale.ENGLISH).contains(mSearchString);
+                product.getProductDescription().toLowerCase(Locale.ENGLISH).contains(mSearchString);
     }
 }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="image_small_dimen">55dp</dimen>
+    <dimen name="image_small_dimen">160dp</dimen>
     <dimen name="padding">10dp</dimen>
-    <dimen name="view_pager_height">180dp</dimen>
+    <dimen name="view_pager_height">200dp</dimen>
 </resources>

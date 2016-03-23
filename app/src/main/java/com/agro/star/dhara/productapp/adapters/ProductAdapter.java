@@ -9,9 +9,11 @@ import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.ImageView;
 
+import com.agro.star.dhara.productapp.ProductApp;
 import com.agro.star.dhara.productapp.R;
 import com.agro.star.dhara.productapp.customviews.CustomTextView;
 import com.agro.star.dhara.productapp.models.Product;
+import com.agro.star.dhara.productapp.utils.ImageUtilities;
 import com.agro.star.dhara.productapp.utils.predicates.ProductPredicate;
 import com.google.common.collect.Collections2;
 
@@ -43,6 +45,11 @@ public class ProductAdapter extends ArrayAdapter<Product> implements Filterable{
         mOriginalProductList.addAll(mProductList);
     }
 
+    public void setOriginalProductList(List<Product> productList) {
+        mOriginalProductList = new ArrayList<>();
+        mOriginalProductList.addAll(productList);
+    }
+
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         View view = convertView;
@@ -65,8 +72,9 @@ public class ProductAdapter extends ArrayAdapter<Product> implements Filterable{
          */
         vh.txtProductName.setText(mProductList.get(position).getProductName());
         vh.txtProductDesc.setText(mProductList.get(position).getProductDescription());
-        vh.txtProductPrice.setText(""+mProductList.get(position).getProductPrice());
-
+        vh.txtProductPrice.setText(ProductApp.getAppContext().getString(R.string.rupee_symbol)+ " " +
+                mProductList.get(position).getProductPrice());
+        vh.imgProduct.setImageDrawable(ImageUtilities.getDrawable(mProductList.get(position).getProductImage()));
         return view;
     }
 
@@ -103,7 +111,8 @@ public class ProductAdapter extends ArrayAdapter<Product> implements Filterable{
 
         @Override
         protected void publishResults(CharSequence constraint, FilterResults results) {
-            mProductList = (List<Product>)results.values;
+            mProductList.clear();
+            mProductList.addAll((List<Product>)results.values);
             notifyDataSetChanged();
         }
     }

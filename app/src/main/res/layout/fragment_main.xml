@@ -2,12 +2,17 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <include
-        layout="@layout/layout_toolbar"
-        android:id="@+id/toolbar"/>
-    <android.support.v4.widget.ViewPager
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/view_pager_height"/>
+        android:layout_height="@dimen/view_pager_height"
+        android:background="@color/colorWhite"/>
+    <com.viewpagerindicator.CirclePageIndicator
+        android:id="@+id/indicator"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"/>
     <GridView
         android:id="@+id/gridView"
         android:layout_width="match_parent"
