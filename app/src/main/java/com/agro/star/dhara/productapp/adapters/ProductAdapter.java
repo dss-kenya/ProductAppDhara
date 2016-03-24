@@ -73,7 +73,7 @@ public class ProductAdapter extends ArrayAdapter<Product> implements Filterable{
         vh.txtProductName.setText(mProductList.get(position).getProductName());
         vh.txtProductDesc.setText(mProductList.get(position).getProductDescription());
         vh.txtProductPrice.setText(ProductApp.getAppContext().getString(R.string.rupee_symbol)+ " " +
-                mProductList.get(position).getProductPrice());
+                mProductList.get(position).getProductDisplayPrice());
         vh.imgProduct.setImageDrawable(ImageUtilities.getDrawable(mProductList.get(position).getProductImage()));
         return view;
     }
