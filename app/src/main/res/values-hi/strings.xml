@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">प्रोडक्ट के लिस्ट</string>
+    <string name="action_search">ुधपधन के लिए खोजिए</string>
+    <string name="action_settings">लैंग्वेज के सेटिंग्स</string>
+    <string name="ok">उपयोग करे</string>
+    <string name="cancel">उपयोग न करे</string>
+</resources>

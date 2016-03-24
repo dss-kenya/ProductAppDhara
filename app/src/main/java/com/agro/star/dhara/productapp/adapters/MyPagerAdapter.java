@@ -9,7 +9,7 @@ import com.agro.star.dhara.productapp.fragments.ImageFragment;
 import java.util.List;
 
 /**
- * Created by USER on 23-03-2016.
+ * Created by Dhara Shah on 23-03-2016.
  */
 public class MyPagerAdapter extends FragmentPagerAdapter {
     private List<String> mFeaturedImages;
@@ -21,6 +21,9 @@ public class MyPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int i) {
+        /**
+         * Loads the image fragment with the image to be displayed
+         */
         return ImageFragment.newInstance(mFeaturedImages.get(i));
     }
 

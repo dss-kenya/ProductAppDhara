@@ -5,5 +5,4 @@ package com.agro.star.dhara.productapp.interfaces;
  */
 public interface IActionPerformedListener {
     void onSearchPerformed(String searchString);
-    void onLanguageChanged();
 }

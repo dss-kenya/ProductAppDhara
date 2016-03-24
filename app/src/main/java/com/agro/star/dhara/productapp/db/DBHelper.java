@@ -123,7 +123,7 @@ public class DBHelper  extends SQLiteOpenHelper{
 	 * Gets the list of products based on the language currently selected</br>
 	 * We are using the startValue to allow pagination to take place as it is not
 	 * correct to load all the items at once
-	 * @param startValue - will start with 0 and get incremented by 10
+	 * @param startValue - will start with 0 and get incremented by 6
 	 *
 	 * @return
 	 */
@@ -144,7 +144,7 @@ public class DBHelper  extends SQLiteOpenHelper{
 				ProductTransContract.ProductTransEntry.TABLE_NAME + "." + ProductTransContract.ProductTransEntry.COLUMN_NAME_PRODUCT_ID +
 				" where " +
 				ProductTransContract.ProductTransEntry.COLUMN_NAME_CODE + "='" + languageCode +"'" +
-				" limit " + startValue + ", 15 ";
+				" limit " + startValue + " , 6";
 
 		mSqliteDb = this.getReadableDatabase();
 		Cursor c = mSqliteDb.rawQuery(sql, null);

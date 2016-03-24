@@ -14,7 +14,7 @@ import com.agro.star.dhara.productapp.models.Language;
 import java.util.List;
 
 /**
- * Created by USER on 23-03-2016.
+ * Created by Dhara Shah on 23-03-2016.
  */
 public class LanguageAdapter extends ArrayAdapter<Language>{
     private int RESOURCE;

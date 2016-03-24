@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:background="@color/colorBlackFaded">
     <LinearLayout
         android:id="@+id/lnrHeader"
@@ -14,7 +14,6 @@
             android:layout_height="wrap_content"
             android:padding="@dimen/padding"
             android:text="@string/action_settings"
-            android:layout_alignParentTop="true"
             style="@style/ProductApp.TitleTextStyle" />
         <View
             android:layout_width="match_parent"
@@ -24,18 +23,17 @@
     <ListView
         android:id="@android:id/list"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:cacheColorHint="@android:color/transparent"
         android:divider="@color/colorDivider"
         android:dividerHeight="1px"
-        android:layout_below="@+id/lnrHeader"
-        android:layout_above="@+id/lnrFooter"/>
+        android:layout_below="@+id/lnrHeader"/>
     <LinearLayout
         android:id="@+id/lnrFooter"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_alignParentBottom="true">
+        android:layout_below="@android:id/list">
         <View
             android:layout_width="match_parent"
             android:layout_height="1px"

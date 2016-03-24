@@ -173,6 +173,7 @@ public class MainActivity extends BaseActivity implements ILanguageSelectionList
         mToolbar = (Toolbar)findViewById(R.id.toolbar);
         mTxtTitle = (CustomTextView)findViewById(R.id.txtHeader);
         setSupportActionBar(mToolbar);
+        mTxtTitle.setText(getString(R.string.app_name));
     }
 
     /**
@@ -192,5 +193,6 @@ public class MainActivity extends BaseActivity implements ILanguageSelectionList
         Intent intent = new Intent(ProductApp.getAppContext(),
                 MainActivity.class);
         startActivity(intent);
+        finish();
     }
 }

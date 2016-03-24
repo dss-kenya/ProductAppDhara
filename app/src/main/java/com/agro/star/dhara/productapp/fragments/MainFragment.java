@@ -107,6 +107,9 @@ public class MainFragment extends Fragment implements IActionPerformedListener {
         mActionPerformedListener = this;
         ((MainActivity)getActivity()).setSearchPerformedListener(mActionPerformedListener);
 
+        mIsLoadMore = true;
+        mStartValue = 0;
+
         setScrollListener();
     }
 
@@ -117,8 +120,6 @@ public class MainFragment extends Fragment implements IActionPerformedListener {
         /**
          * Set the adapter for the gridview, start with upper bound 0
          */
-        mIsLoadMore = true;
-        mStartValue = 0;
         mProductList = DBHelper.getInstance(ProductApp.getAppContext())
                 .getAllProducts(mStartValue, SharedPrefs.getString(SharedPrefs.LANGUAGE_SELECTED,
                         getString(R.string.english_code)));
@@ -153,23 +154,9 @@ public class MainFragment extends Fragment implements IActionPerformedListener {
          mProductAdapter.getFilter().filter(searchString);
     }
 
-    @Override
-    public void onLanguageChanged() {
-        /**
-         * A language change has taken place and so we re-set the text
-         */
-        refreshViews();
-    }
-
-    private void refreshViews(){
-        mProductList.clear();
-        mProductList.addAll(DBHelper.getInstance(ProductApp.getAppContext()).getAllProducts(0,
-                SharedPrefs.getString(SharedPrefs.LANGUAGE_SELECTED, getString(R.string.english_code))));
-        mProductAdapter.notifyDataSetChanged();
-
-        mProductAdapter.setOriginalProductList(mProductList);
-    }
-
+    /**
+     * Sets a scroll listener for load more functionality
+     */
     private void setScrollListener(){
         mGridProducts.setOnScrollListener(new AbsListView.OnScrollListener() {
             @Override
@@ -186,7 +173,7 @@ public class MainFragment extends Fragment implements IActionPerformedListener {
                 boolean loadMore = firstVisibleItem + visibleItemCount >= totalItemCount;
                 if (loadMore && mIsLoadMore) {
                     mPreviousTotalCount = totalItemCount;
-                    mStartValue += 10;
+                    mStartValue += 6;
                     // load more items since the list has reached the end
                     new Thread(new Runnable() {
                         @Override
