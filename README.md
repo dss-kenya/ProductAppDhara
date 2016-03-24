@@ -1,5 +1,5 @@
 # About **Product App** (the app) #
-- This application is a small demo that gets a list of repositories using the github api.
+- This application is a small demo that displays the product catalogue with multilingual support
 
 # Features #
 - View the list of products
